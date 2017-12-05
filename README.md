@@ -1,5 +1,13 @@
 # Technical Interview Homework: GitHub Dashboard
 
+#Instructions
+Navigate to Dashboard Folder
+
+run the following commands:
+npm install
+npm start
+
+Navigate to http://localhost:4200/
 
 ##Purpose
 The purpose of this exercise is to assess the candidate’s ability to build cross platform software clients that satisfy stated requirements. The completed assignment should not only satisfy the requirements outlined below, but also give the candidate an opportunity to show-off their skills.

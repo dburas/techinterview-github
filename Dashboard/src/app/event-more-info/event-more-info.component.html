@@ -1,0 +1,46 @@
+<div class="appdisplayevents appdisplayevents-default">
+    <div class="container-fluid">
+     
+    </div>
+    <div class="row">
+        <div class="details">
+            <div class="image">
+                <a href="{{details?.owner.html_url}}" target="_blank"><img src="{{details?.owner.avatar_url}}" width="150" height ="150"></a>
+            </div>
+            <div class="info">
+         
+                <div>
+                    <h2>Username: {{details?.owner.login}} </h2>
+                </div>
+                <div>
+                    <strong>Details</strong>
+                </div>
+                <div>
+                    Repo Name : {{details?.name}}
+                </div>
+                <div *ngIf="details?.language === null">  
+                    Language: None
+                </div>
+                <div *ngIf="details?.language != null">  
+                    Language: {{details?.language}}
+                </div>
+                <div>
+                    Watchers: {{details?.watchers}}
+                </div>
+                <div>
+                    Subscribers: {{details?.subscribers_count}}
+                </div>
+                <div>
+                    Forks: {{details?.forks}}
+                </div>
+                <div>
+                    <a href="{{details?.html_url}}" target="_blank">Go to Repo</a>
+                </div>
+              </div>
+        </div>
+        <div class="Back">
+
+          <button class="btn btn-default" routerLink = "">Go Back</button>
+        </div>
+    </div>
+</div>

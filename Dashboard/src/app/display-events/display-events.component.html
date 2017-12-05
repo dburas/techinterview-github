@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row-refresh"> 
+      <form id="refreshForm" (click) = "refreshEvents()"  class="approot-form approot-left"  input type="submit">
+          <button class="btn btn-default" >
+              Refresh
+          </button>
+      </form>
+  </div>
+  <div class="row">
+      <div *ngFor="let event of events; let i=index" class="col-md-6">
+          <div [attr.data-index]="i" class="events">
+              <div class="dashboard">
+                  <h3> Username: {{event?.actor.login}}</h3>
+              </div>
+              
+              <div> 
+                  Event Type: {{event?.type}}
+              </div>
+              <div>
+                  Repo Name: {{event?.repo.name}}
+              </div>
+              
+              <nav>
+              <a (click)= "setUrl(event?.repo.url)" routerLink="/more-info">more info...</a>
+              </nav>
+              
+          </div>
+        </div>
+  </div>
+  </div>
